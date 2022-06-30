@@ -1,10 +1,12 @@
+import 'dotenv/config'
+
 export const options = {
     mariaDB:{
         client:"mysql2",
         connection:{
             host:"127.0.0.1",
             user:"root",
-            password:"root",
+            password:"process.env.PASS_ROOT",
             database:"ecommerce",
         },
     },

@@ -8,6 +8,7 @@ const __dirname = path.dirname(__filename);
 import http from 'http'
 const app = express()
 import multer from 'multer'
+import desafioFaker from "./desafioFaker.js"
 import routesProductos from "./routes/routes-productos.js"
 import routesMensajes from "./routes/routes-mensajes.js"
 
@@ -21,6 +22,7 @@ app.use(multer({
 app.use(express.json())
 app.use(express.urlencoded({extended:true}))
 app.use(express.static(__dirname + "/public"))
+app.use('/api/productos-test',desafioFaker)
 app.use('/productos', routesProductos)
 app.set('views','./views')
 app.set('view engine','ejs')

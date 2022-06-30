@@ -33,7 +33,7 @@ app.get('/',(req,res) => {
     })
 })
 
-const productos = []
+export const productos = []
 
 const mensajes = []
 

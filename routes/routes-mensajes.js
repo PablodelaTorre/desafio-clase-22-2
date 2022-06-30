@@ -32,24 +32,6 @@ export default class Api {
         }
     }
 
-    async actualizarP(id,product){
-        try {
-            let producto = await this.findById(id)
-            let prod = {...product,id}
-            if (producto) {
-                producto = prod
-                const productos = await this.findAll()
-                productos.push(producto)
-                await fs.promises.writeFile(this.rutaBD,JSON.stringify(productos))
-        }   else {
-            console.log('Producto no encontrado')
-        }    
-        } catch (error) {
-            throw new Error(`Error: ${error}`)
-        }
-        
-    }
-
     async deleteP(id){
         try {
             const elementoBorrado = await this.knex.from(this.table).where("id",id).del()

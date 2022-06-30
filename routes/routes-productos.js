@@ -1,4 +1,5 @@
 import { Router } from 'express'
+import { productos } from '../servidor.js'
 const router = Router()
 
 class Container {

@@ -1,5 +1,16 @@
 import 'dotenv/config'
 
+
+export default {
+    mongoDb:{
+        URL: "mongodb+srv://pablo:pablo@cluster0.krjoq.mongodb.net/ecommerce?retryWrites=true&w=majority",
+        options:{
+            useNewUrlParser:true,
+            useUnifiedTopology:true
+        }
+    }
+}
+
 export const options = {
     mariaDB:{
         client:"mysql2",
